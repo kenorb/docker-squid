@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: docker:18.03.0-ce-git
         environment:
-          IMAGE_NAME: "sameersbn/squid"
+          IMAGE_NAME: "kenorb/squid"
 
     steps:
       - checkout

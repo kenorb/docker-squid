@@ -1,6 +1,6 @@
-[![Circle CI](https://circleci.com/gh/sameersbn/docker-squid.svg?style=shield)](https://circleci.com/gh/sameersbn/docker-squid) [![Docker Repository on Quay.io](https://quay.io/repository/sameersbn/squid/status "Docker Repository on Quay.io")](https://quay.io/repository/sameersbn/squid)
+[![Circle CI](https://circleci.com/gh/kenorb/docker-squid.svg?style=shield)](https://circleci.com/gh/kenorb/docker-squid) [![Docker Repository on Quay.io](https://quay.io/repository/kenorb/squid/status "Docker Repository on Quay.io")](https://quay.io/repository/kenorb/squid)
 
-# sameersbn/squid:3.5.27-1
+# `kenorb/squid`
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
@@ -25,11 +25,12 @@ Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It r
 
 ## Contributing
 
+This repository is a fork from [`sameersbn/docker-squid`](https://github.com/sameersbn/docker-squid).
+
 If you find this image useful here's how you can help:
 
 - Send a pull request with your awesome features and bug fixes
 - Help users resolve their [issues](../../issues?q=is%3Aopen+is%3Aissue).
-- Support the development of this image with a [donation](http://www.damagehead.com/donate/)
 
 ## Issues
 
@@ -45,7 +46,7 @@ If the above recommendations do not help then [report your issue](../../issues/n
 
 # Getting started
 
-## Installation
+## Installation (upstream)
 
 Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/sameersbn/squid) and is the recommended method of installation.
 
@@ -61,7 +62,7 @@ Alternatively you can build the image yourself.
 docker build -t sameersbn/squid github.com/sameersbn/docker-squid
 ```
 
-## Quickstart
+## Quickstart (upstream)
 
 Start Squid using:
 
@@ -74,7 +75,7 @@ docker run --name squid -d --restart=always \
 
 *Alternatively, you can use the sample [docker-compose.yml](docker-compose.yml) file to start the container using [Docker Compose](https://docs.docker.com/compose/)*
 
-## Command-line arguments
+## Command-line arguments (upstream)
 
 You can customize the launch command of the Squid server by specifying arguments to `squid` on the `docker run` command. For example the following command prints the help menu of `squid` command:
 
@@ -98,7 +99,7 @@ mkdir -p /srv/docker/squid
 chcon -Rt svirt_sandbox_file_t /srv/docker/squid
 ```
 
-## Configuration
+## Configuration (upstream)
 
 Squid is a full featured caching proxy server and a large number of configuration parameters. To configure Squid as per your requirements mount your custom configuration at `/etc/squid/squid.conf`.
 
@@ -148,7 +149,7 @@ You can also mount a volume at `/var/log/squid/` so that the logs are directly a
 
 # Maintenance
 
-## Upgrading
+## Upgrading (upstream)
 
 To upgrade to newer releases:
 
